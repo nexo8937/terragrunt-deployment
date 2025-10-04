@@ -15,4 +15,5 @@ inputs = {
   database_subnets = ["10.0.31.0/24", "10.0.32.0/24"]
   enable_nat_gateway = true
   single_nat_gateway = true
+  owner = "Yeghish"
 }

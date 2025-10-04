@@ -25,3 +25,5 @@ variable "enable_nat_gateway" {
 variable "single_nat_gateway" {
   type = bool
 }
+
+variable "owner" {}

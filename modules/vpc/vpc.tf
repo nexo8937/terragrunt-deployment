@@ -11,9 +11,14 @@ module "vpc" {
   enable_nat_gateway = var.enable_nat_gateway
   single_nat_gateway = var.single_nat_gateway
 
-  manage_default_network_acl      = false
-  manage_default_security_group   = false
-  manage_default_route_table      = false
-  create_elasticache_subnet_group = false
-  create_redshift_subnet_group    = false
+  manage_default_network_acl         = false
+  manage_default_security_group      = false
+  manage_default_route_table         = false
+  create_elasticache_subnet_group    = false
+  create_redshift_subnet_group       = false
+  create_database_subnet_group       = false
+  create_database_subnet_route_table = true
+  tags = {
+    Owner = var.owner
+  }
 }

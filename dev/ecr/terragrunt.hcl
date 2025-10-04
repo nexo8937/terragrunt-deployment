@@ -8,4 +8,5 @@ terraform {
 
 inputs = {
   repo_name = "terragrunt-test"
+  owner     = "Yeghish"
 }

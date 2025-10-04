@@ -7,7 +7,10 @@ include {
 }
 
 dependency "vpc" {
-  config_path = "../network"
+  config_path  = "../network"
+  mock_outputs        = {
+    vpc_id = "vpc-id"
+    }
 }
 
 inputs = {
@@ -15,4 +18,5 @@ inputs = {
   vpc_id      = dependency.vpc.outputs.vpc_id 
   port        = 5432
   cidr_blocks = "10.0.0.0/16"
+  owner       = "Yeghish"
 }  
