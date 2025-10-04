@@ -34,7 +34,7 @@ inputs = {
   create_db_parameter_group = false
   db_subnet_group_name  = "terragrunt-test"
   vpc_security_group_ids = [dependency.security_group.outputs.security_group_id]
-  subnet_ids = dependency.vpc.outputs.database_subnets
+  subnet_ids = [dependency.vpc.outputs.database_subnets]
   publicly_accessible = false
   owner = "Yeghish"
 }
