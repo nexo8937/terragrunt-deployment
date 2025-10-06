@@ -1,0 +1,7 @@
+# Ignore all Terragrunt cache directories
+**/.terragrunt-cache/
+
+# Ignore all Terraform lock and state files
+**/.terraform.lock.hcl
+**/*.tfstate
+**/*.tfstate.*

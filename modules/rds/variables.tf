@@ -64,4 +64,9 @@ variable "publicly_accessible" {
   default = false
 }
 
+variable "manage_master_user_password" {
+  type    = bool
+  default = false
+}
+
 variable "owner" {}

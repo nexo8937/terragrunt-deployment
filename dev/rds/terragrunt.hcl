@@ -22,7 +22,7 @@ dependency "security_group" {
 
 inputs = {
   identifier = "terragrunt-test"
-  db_name     = "test"
+#  db_name     = "test"
   username = "test"
   password = "00000000"
   db_name = "test"
@@ -34,7 +34,8 @@ inputs = {
   create_db_parameter_group = false
   db_subnet_group_name  = "terragrunt-test"
   vpc_security_group_ids = [dependency.security_group.outputs.security_group_id]
-  subnet_ids = [dependency.vpc.outputs.database_subnets]
+  subnet_ids = dependency.vpc.outputs.database_subnets
+  manage_master_user_password = false
   publicly_accessible = false
   owner = "Yeghish"
 }
