@@ -21,4 +21,6 @@ variable "max_size" {}
 variable "min_size" {}
 variable "owner" {}
 
-variable "instance_types" {}
+variable "instance_types" {
+  type = list(string)
+}
